@@ -15,10 +15,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - uses: actions/checkout@v3
     - name: download
       run: curl https://github.com/mat-1/minecraft-scans/raw/main/ips -o ${GITHUB_WORKSPACE}/ips
       #run: echo ${GITHUB_WORKSPACE}
-    - uses: actions/checkout@v3
+    #- uses: actions/checkout@v3
     - name: Run
       run: cargo run
       
