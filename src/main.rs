@@ -23,8 +23,8 @@ fn main() {
     }    
     let path = std::env::current_dir().unwrap();
     println!("The current directory is {}", path.display());  
-    let mut output_file = File::create("output.txt");
-    let mut output_file = OpenOptions::new().write(true).open("./output.txt").unwrap();
+    let _output_file = File::create("output.txt");
+    let mut _output_file = OpenOptions::new().write(true).open("./output.txt").unwrap();
     for ip in ips {
         output_file.write_all(ip.as_bytes()).unwrap();
         output_file.write_all(b"\n").unwrap();
