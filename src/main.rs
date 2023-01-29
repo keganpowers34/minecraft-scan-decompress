@@ -26,8 +26,8 @@ fn main() {
     let _output_file = File::create("output.txt");
     let mut _output_file = OpenOptions::new().write(true).open("./output.txt").unwrap();
     for ip in ips {
-        output_file.write_all(ip.as_bytes()).unwrap();
-        output_file.write_all(b"\n").unwrap();
+        _output_file.write_all(ip.as_bytes()).unwrap();
+        _output_file.write_all(b"\n").unwrap();
     }
 
 } 
