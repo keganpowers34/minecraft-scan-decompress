@@ -21,5 +21,5 @@ jobs:
       run: curl https://github.com/mat-1/minecraft-scans/raw/main/ips -o ${GITHUB_WORKSPACE}/ips
     - name: Run
       run: cargo run
-    - name: Upload Zip Archive
-      run: gh release upload ${GITHUB_WORKSPACE}/output.txt output.txt --clobber
+    - name: upload output
+      run: gh release create ${GITHUB_WORKSPACE}/output.txt output.txt --clobber
