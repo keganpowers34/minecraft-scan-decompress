@@ -26,6 +26,6 @@ jobs:
     #- name: upload output
     #  run: gh release create ${GITHUB_WORKSPACE}/output.txt output.txt --latest
     - name: Upload artifact
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v3
       with:
         path: ./target/release/output.txt
