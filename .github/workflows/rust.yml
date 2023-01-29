@@ -21,4 +21,4 @@ jobs:
     - name: Run
       run: cargo run
     - name: Upload Zip Archive
-      run: gh release upload ${GITHUB_WORKSPACE}/output.txt
+      run: gh release upload ${GITHUB_WORKSPACE}/output.txt --clobber
