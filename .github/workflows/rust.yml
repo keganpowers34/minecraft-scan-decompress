@@ -22,4 +22,4 @@ jobs:
     - name: Run
       run: cargo run
     - name: upload output
-      run: gh release create ${GITHUB_WORKSPACE}/output.txt output.txt --clobber
+      run: gh release create ${GITHUB_WORKSPACE}/output.txt output.txt --latest
