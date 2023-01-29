@@ -22,7 +22,7 @@ jobs:
     - name: download
       run: curl https://github.com/mat-1/minecraft-scans/raw/main/ips -o ${GITHUB_WORKSPACE}/ips
     - name: Run
-      run: cargo run
+      run: cargo run --release
     #- name: upload output
     #  run: gh release create ${GITHUB_WORKSPACE}/output.txt output.txt --latest
     - name: Upload artifact
