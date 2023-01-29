@@ -16,7 +16,7 @@ jobs:
 
     steps:
     - name: download
-      run: curl https://path/to/file -o path/to/save
+      run: curl https://github.com/mat-1/minecraft-scans/raw/main/ips -o ./ips
     - uses: actions/checkout@v3
     - name: Run
       run: cargo run --verbose
