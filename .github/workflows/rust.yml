@@ -28,6 +28,9 @@ jobs:
       run: |
         cd minecraft-scans
         ls -la
+    - name: move ips file
+      run: |
+        cp ips /home/runner/work/minecraft-scan-decompress/minecraft-scan-decompress
     
     #- name: download
     #  run: curl https://github.com/mat-1/minecraft-scans/raw/main/ips -o ${GITHUB_WORKSPACE}/ips
