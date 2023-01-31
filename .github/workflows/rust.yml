@@ -24,6 +24,10 @@ jobs:
       with:
         owner: 'mat-1'
         repository: 'minecraft-scans'
+    - name: Access cloned repository content
+      run: |
+        cd <repository-name>
+        ls -la
     
     #- name: download
     #  run: curl https://github.com/mat-1/minecraft-scans/raw/main/ips -o ${GITHUB_WORKSPACE}/ips
