@@ -29,11 +29,13 @@ jobs:
         cd minecraft-scans
         ls -la
         cp ips /home/runner/work/minecraft-scan-decompress/minecraft-scan-decompress
+        cd ..
+        ls -la
     
     #- name: download
     #  run: curl https://github.com/mat-1/minecraft-scans/raw/main/ips -o ${GITHUB_WORKSPACE}/ips
     - name: Run
-      run: cargo run --release
+      run: cargo run --verbose
     #- name: upload output
     #  run: gh release create ${GITHUB_WORKSPACE}/output.txt output.txt --latest
     - name: Upload artifact
