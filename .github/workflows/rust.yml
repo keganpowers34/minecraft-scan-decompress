@@ -26,7 +26,7 @@ jobs:
         repository: 'minecraft-scans'
     - name: Access cloned repository content
       run: |
-        cd <repository-name>
+        cd minecraft-scans
         ls -la
     
     #- name: download
