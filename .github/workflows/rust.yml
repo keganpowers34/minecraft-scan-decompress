@@ -28,8 +28,6 @@ jobs:
       run: |
         cd minecraft-scans
         ls -la
-    - name: move ips file
-      run: |
         cp ips /home/runner/work/minecraft-scan-decompress/minecraft-scan-decompress
     
     #- name: download
