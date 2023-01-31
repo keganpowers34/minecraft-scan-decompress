@@ -13,8 +13,6 @@ env:
 
 jobs:
   run:
-    env:
-      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     runs-on: ubuntu-latest
 
     steps:
@@ -24,23 +22,16 @@ jobs:
       with:
         owner: 'mat-1'
         repository: 'minecraft-scans'
+    
     - name: Access cloned repository content
       run: |
         cd minecraft-scans
         ls -la
         cp ips /home/runner/work/minecraft-scan-decompress/minecraft-scan-decompress
-        cd ..
-        ls -la
-    
-    #- name: download
-    #  run: curl https://github.com/mat-1/minecraft-scans/raw/main/ips -o ${GITHUB_WORKSPACE}/ips
+
     - name: Run
       run: cargo run --verbose
-    - name: debug
-      run: |
-        ls -la
-    #- name: upload output
-    #  run: gh release create ${GITHUB_WORKSPACE}/output.txt output.txt --latest
+
     - name: Upload artifact
       uses: actions/upload-artifact@v3
       with:
